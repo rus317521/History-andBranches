@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.OptionalInt;
-
 public class SalesManager {
     protected long[] sales;
 
@@ -30,17 +27,17 @@ public class SalesManager {
 
 
     public int average() {
-        int sum=0;
-        int j=0;
+        int sum = 0;
+        int j = 0;
         int maxSale = this.max();
         int minSale = this.min();
         for (int sale : sales) {
             if (sale < maxSale && sale > minSale) {
-                sum+=sale;
-                j+=1;
+                sum += sale;
+                j += 1;
             }
         }
-        return sum/j;
+        return sum / j;
     }
 
 }
