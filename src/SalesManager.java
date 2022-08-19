@@ -15,9 +15,9 @@ public class SalesManager {
         return max;
     }
 
-    public int min() {
-        int min = 1000_000_000;
-        for (int sale : sales) {
+    public long min() {
+        long min = 1000_000_000;
+        for (long sale : sales) {
             if (sale < min) {
                 min = sale;
             }
@@ -26,12 +26,12 @@ public class SalesManager {
     }
 
 
-    public int average() {
-        int sum = 0;
-        int j = 0;
-        int maxSale = this.max();
-        int minSale = this.min();
-        for (int sale : sales) {
+    public long average() {
+        long sum = 0;
+        long j = 0;
+        long maxSale = this.max();
+        long minSale = this.min();
+        for (long sale : sales) {
             if (sale < maxSale && sale > minSale) {
                 sum += sale;
                 j += 1;
